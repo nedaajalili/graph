@@ -39,6 +39,12 @@ int main(int argc,char *argv[])
         srcVertex=findVertex(g,src);
         tmpEdge=createEdge(w,dstVertex);
         insertEdge(srcVertex,tmpEdge);
+        if(dir==0){
+            dstVertex=findVertex(g,src);
+            srcVertex=findVertex(g,dst);
+            tmpEdge=createEdge(w,srcVertex);
+            insertEdge(dstVertex,tmpEdge);
+        }
     }
     return 0;
 }
